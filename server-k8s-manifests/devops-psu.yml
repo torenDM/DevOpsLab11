@@ -1,16 +1,11 @@
-﻿apiVersion: v1
-kind: Namespace
-metadata:
-  name: devops-psu
----
-apiVersion: apps/v1
+﻿apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: devops-psu
   namespace: devops-psu
   labels:
     app: devops-psu
-    release-date: RELEASE-DATE
+    release-date: "1768479416"
 spec:
   replicas: 1
   selector:
@@ -21,7 +16,7 @@ spec:
       labels:
         app: devops-psu
         svc: frontend
-        release-date: RELEASE-DATE
+        release-date: "1768479416"
     spec:
       containers:
       - name: devops-psu-server
@@ -46,3 +41,6 @@ spec:
     targetPort: 8000
   externalIPs:
   - 10.0.2.15
+
+
+
