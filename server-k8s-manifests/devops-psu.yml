@@ -1,9 +1,4 @@
-﻿apiVersion: v1
-kind: Namespace
-metadata:
-  name: devops-psu
----
-apiVersion: apps/v1
+﻿apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: devops-psu
@@ -46,3 +41,4 @@ spec:
     targetPort: 8000
   externalIPs:
   - 10.0.2.15
+
