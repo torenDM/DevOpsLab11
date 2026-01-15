@@ -1,11 +1,13 @@
-﻿import http.server
+﻿"""DevOps Lab 11: simple HTTP server for CI/CD demo."""
+
+import http.server
 import socketserver
 
 PORT = 8000
 
 
 class TestMe:
-    """Small class for unit tests."""
+    """Small class used in unit tests."""
 
     def take_five(self) -> int:
         """Return constant 5."""
@@ -17,6 +19,7 @@ class TestMe:
 
 
 def main() -> None:
+    """Start a simple HTTP server on PORT."""
     handler = http.server.SimpleHTTPRequestHandler
     with socketserver.TCPServer(("", PORT), handler) as httpd:
         print("serving at port", PORT)
